@@ -15,8 +15,13 @@ pub struct Task {
 
 }
 
-pub struct TaskList {
+pub struct Database {
 
     pub tasks: Vec<Task>
+    
+}
+
+impl Database{
+
     
 }
