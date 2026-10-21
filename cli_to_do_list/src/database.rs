@@ -23,5 +23,21 @@ pub struct Database {
 
 impl Database{
 
+    pub fn add(){
+
+    }
+
+    pub fn update(){
+
+    }
+
+    pub fn delete(){
+
+    }
+
+    pub fn get_all(){
+
+    }
+
     
 }
