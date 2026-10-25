@@ -33,7 +33,19 @@ impl Database{
         }
     }
 
-    pub fn add(){
+    pub fn add(&mut self, title: String) {
+
+        let task = Task {
+
+            id: self.next_id,
+            title,
+            state: TaskState::Incomplete // Set the initial state of the task to Incomplete by default
+
+        };
+
+        self.tasks.push(task);
+        
+        self.next_id += 1; // Increment the next_id for the next task
 
     }
 
