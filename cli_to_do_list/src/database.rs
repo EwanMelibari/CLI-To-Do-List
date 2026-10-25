@@ -44,7 +44,7 @@ impl Database{
         };
 
         self.tasks.push(task);
-        
+
         self.next_id += 1; // Increment the next_id for the next task
 
     }
@@ -57,7 +57,9 @@ impl Database{
 
     }
 
-    pub fn get_all(){
+    pub fn get_all(&self) -> &Vec<Task> {
+
+        &self.tasks
 
     }
 
