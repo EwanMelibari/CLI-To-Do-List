@@ -17,15 +17,19 @@ pub struct Task {
 
 pub struct Database {
 
-    pub tasks: Vec<Task>
-    
+    pub tasks: Vec<Task>,
+    // To generate unique IDs for tasks, it,s placed here to keep track of the next available ID
+    // while Task struct is used to represent individual tasks, the Database struct is used to manage a collection of tasks 
+    next_id: u32
 }
 
 impl Database{
 
+    // Creates a new instance of the Database struct with an empty vector of tasks.
     pub fn new() -> Database {
         Database { 
-            tasks: Vec::new() 
+            tasks: Vec::new(),
+            next_id: 1 // Initialize the first id to be 1 by default
         }
     }
 
