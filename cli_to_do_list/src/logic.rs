@@ -29,6 +29,6 @@ pub fn add_task(db: &mut Database, title: String) -> Result<Response, Response> 
 
     db.add(title);
 
-    Ok(Response::Success(200))
+    Ok(Response::Success(201))
 
 }
