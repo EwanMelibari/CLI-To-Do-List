@@ -53,7 +53,19 @@ impl Database{
 
     }
 
-    pub fn delete(){
+    pub fn delete(&mut self, id: u32) -> bool{
+
+        if let Some(target) = self.tasks.iter().position(|task: &Task| task.id == id) {
+
+            self.tasks.remove(target);
+
+            true
+
+        } else {
+
+            false
+
+        }
 
     }
 
