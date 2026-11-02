@@ -50,7 +50,31 @@ impl Database{
 
     }
 
-    pub fn update(){
+    pub fn update(&mut self, id: u32, new_title: Option<String>, new_state: Option<TaskState>) -> bool{
+
+        // find the given ID then update either the titel or the state
+        if let Some(task) = self.tasks.iter_mut().find(|task| task.id == id) {
+
+            if let Some(title) = new_title {
+
+                task.title = title;
+
+            }
+
+            if let Some(state) = new_state {
+
+                task.state = state;
+
+            }
+
+            true
+
+        } else {
+
+            false
+
+        }
+
 
     }
 
