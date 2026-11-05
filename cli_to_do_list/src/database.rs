@@ -1,5 +1,5 @@
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq)]
 pub enum TaskState {
 
     Incomplete,
@@ -55,22 +55,24 @@ impl Database{
         // find the given ID then update either the titel or the state
         if let Some(task) = self.tasks.iter_mut().find(|task| task.id == id) {
 
+            // Update title
             if let Some(title) = new_title {
 
                 task.title = title;
 
             }
 
+            // update state
             if let Some(state) = new_state {
 
                 task.state = state;
 
             }
-
+            // Return true to indicate that the update was successful
             true
 
         } else {
-
+            // Return false to indicate that the task with the given ID was not found
             false
 
         }
