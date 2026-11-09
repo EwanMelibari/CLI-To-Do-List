@@ -1,5 +1,5 @@
 # Rust-To-do-list
-
+# The project has been temporarily suspended.
 # Use case :
 ![Use case](https://github.com/EwanMelibari/CLI-To-Do-List/blob/main/Rust%20To%20do%20list%20usecase.drawio.png) 
 
